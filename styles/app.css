@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.tab-active {
+    @apply [--tab-bg:hsl(var(--p))] [--tab-border-color:hsl(var(--p))] [--tab-color:hsl(var(--pc))];
+}
+
+.tab:focus-visible.tab-lifted {
+    @apply rounded-b-none;
+}
+
+.react-tabs__tab--disabled {
+    @apply text-gray-500;
+}
+
+.tab-panel {
+    @apply hidden p-6 shadow-xl bg-primary;
+}
+
+.react-tabs__tab-panel--selected {
+    @apply block;
+}
+
+.collection-item > img {
+    @apply rounded-lg ring-2 ring-transparent;
+}
+
+.collection-item--selected > img {
+    @apply shadow-lg ring-white;
+}
+
+.btn-stake {
+    @apply mb-2 disabled:hidden;
+}
+
+.info-primary {
+    @apply font-semibold text-primary-content;
+}
+
+.heading-special {
+    @apply font-black leading-6;
+    font-family: 'Squidgy Slimes', PressStart2P-Regular, monospace, AvertaStd-Bold, system-ui,
+        -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+        sans-serif;
+}
+
+.wallet-adapter-dropdown-list {
+    @apply shadow-2xl bg-base-100;
+}
+.wallet-adapter-button:not([disabled]) {
+    @apply btn-primary;
+}
+
+.wallet-adapter-dropdown-list-item:not([disabled]) {
+    @apply text-primary-content hover:bg-primary;
+}
+
+.bg-gradient {
+    background: radial-gradient(
+            41.06% 60.82% at 30.76% 58.94%,
+            #604ae5 0%,
+            rgba(99, 232, 185, 0) 100%
+        ),
+        linear-gradient(108.73deg, rgb(102, 135, 231) 31.33%, #813eee 92.6%);
+    min-height: 100vh;
+}
+
+.logo {
+    max-width: 80%;
+    height: auto;
+    object-fit: cover;
+    opacity: 0.9;
+}
+
+.slimerings {
+    height: auto;
+    max-width: 50%;
+    z-index: 1;
+    /* margin-top: -20%; */
+}
+
+.card {
+    @apply overflow-visible;
+}
+
+.card-body {
+    @apply shadow-lg rounded-xl;
+    /* box-shadow: -3px -3px 0 #10111d,0 -3px 0 #10111d,3px -3px 0 #10111d,3px 0 0 #10111d,3px 3px 0 #10111d,0 3px 0 #10111d,-3px 3px 0 #10111d,-3px 0 0 #10111d,3px 12px 0 #10111d,1.5px 12px 0 #10111d,0 12px 0 #10111d,-1.5px 12px 0 #10111d,-3px 12px 0 #10111d; */
+}
+
+.card-title {
+    font-family: 'Squidgy Slimes';
+    /* @apply drop-shadow-xl; */
+    text-shadow: -3px -3px 0 #000,0 -3px 0 #000,3px -3px 0 #000,3px 0 0 #000,3px 3px 0 #000,0 3px 0 #000,-3px 3px 0 #000,-3px 0 0 #000,3px 0 0 #000,1.5px 0 0 #000,0 0 0 #000,-1.5px 0 0 #000,-3px 0 0 #000,3px 1.5px 0 #000,1.5px 1.5px 0 #000,0 1.5px 0 #000,-1.5px 1.5px 0 #000,-3px 1.5px 0 #000,3px 3px 0 #000,1.5px 3px 0 #000,0 3px 0 #000,-1.5px 3px 0 #000,-3px 3px 0 #000,3px 4.5px 0 #000,1.5px 4.5px 0 #000,0 4.5px 0 #000,-1.5px 4.5px 0 #000,-3px 4.5px 0 #000,3px 6px 0 #000,1.5px 6px 0 #000,0 6px 0 #000,-1.5px 6px 0 #000,-3px 6px 0 #000,3px 7.5px 0 #000,1.5px 7.5px 0 #000,0 7.5px 0 #000,-1.5px 7.5px 0 #000,-3px 7.5px 0 #000,3px 9px 0 #000,1.5px 9px 0 #000,0 9px 0 #000,-1.5px 9px 0 #000,-3px 9px 0 #000;
+}
+
+.shadow-special {
+    text-shadow: -3px -3px 0 #000,0 -3px 0 #000,3px -3px 0 #000,3px 0 0 #000,3px 3px 0 #000,0 3px 0 #000,-3px 3px 0 #000,-3px 0 0 #000,3px 0 0 #000,1.5px 0 0 #000,0 0 0 #000,-1.5px 0 0 #000,-3px 0 0 #000,3px 1.5px 0 #000,1.5px 1.5px 0 #000,0 1.5px 0 #000,-1.5px 1.5px 0 #000,-3px 1.5px 0 #000,3px 3px 0 #000,1.5px 3px 0 #000,0 3px 0 #000,-1.5px 3px 0 #000,-3px 3px 0 #000,3px 4.5px 0 #000,1.5px 4.5px 0 #000,0 4.5px 0 #000,-1.5px 4.5px 0 #000,-3px 4.5px 0 #000,3px 6px 0 #000,1.5px 6px 0 #000,0 6px 0 #000,-1.5px 6px 0 #000,-3px 6px 0 #000,3px 7.5px 0 #000,1.5px 7.5px 0 #000,0 7.5px 0 #000,-1.5px 7.5px 0 #000,-3px 7.5px 0 #000,3px 9px 0 #000,1.5px 9px 0 #000,0 9px 0 #000,-1.5px 9px 0 #000,-3px 9px 0 #000;
+}
+
+@font-face {
+    font-family: "Beachday";
+    src: url("./Beachday.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Squidgy Slimes";
+    src: url("./Squidgy Slimes.ttf") format("truetype");
+    font-weight: normal;
+}
+
+.apple-glass {
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(140%) blur(40px);
+    /* @apply bg-[#000000cc]; */
+}
+
+/* border-2 border-black */
+
+.stake-number {
+    @apply text-3xl text-center bg-green-200 rounded-lg shadow-md;
+    font-family: "Squidgy Slimes";
+    /* box-shadow: inset 5px -5px 0 rgba(0,0,0,.4); */
+}
+
+h2, h3 {
+    font-family: "Squidgy Slimes";
+}
+
+.font-slime {
+    font-family: "Squidgy Slimes", AvertaStd-Bold, 'Segoe UI', monospace;
+}
