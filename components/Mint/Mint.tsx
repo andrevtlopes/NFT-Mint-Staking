@@ -24,15 +24,16 @@ import { GatewayProvider } from '@civic/solana-gateway-react';
 import { sendTransaction } from './connection';
 
 const ConnectButton = styled(WalletModalButton)`
-  width: 100%;
-  height: 60px;
-  margin-top: 0px;
-  margin-bottom: 5px;
-  background: linear-gradient(180deg, #604ae5 0%, #813eee 100%);
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 15px;
+  // width: 100%;
+  // height: 60px;
+  // margin-top: 0px;
+  // margin-bottom: 5px;
+  // background: linear-gradient(180deg, #604ae5 0%, #813eee 100%);
+  // color: white;
+  // font-size: 16px;
+  // font-weight: bold;
+  // border-radius: 15px;
+  // text-align: center;
 `;
 
 const MintContainer = styled.div``; // add your owns styles here
@@ -328,7 +329,7 @@ const Mint = (props: MintProps) => {
         <Paper
           style={{
             padding: 15,
-            paddingBottom: 10,
+            paddingBottom: 15,
             backgroundColor: '#151A1F',
             borderRadius: 15,
           }}

@@ -68,6 +68,7 @@ export const UnstakeCountdown: React.FC<UnstakeCountdownProps> = ({
 
     if (date) {
         return (
+            // @ts-ignore
             <Countdown
                 date={date}
                 now={now}

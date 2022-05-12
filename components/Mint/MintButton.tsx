@@ -98,7 +98,7 @@ export const MintButton = ({
 
   return (
     <button
-      className='w-full mt-3 mb-2 btn btn-secondary'
+      className='w-full mt-3 mb-2 btn btn-secondary rounded-lg'
       disabled={isMinting || !isActive}
       onClick={async () => {
         if (candyMachine?.state.isActive && candyMachine?.state.gatekeeper) {

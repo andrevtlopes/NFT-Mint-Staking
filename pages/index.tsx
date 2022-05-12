@@ -65,10 +65,10 @@ const HomePage = () => {
                     <div className='flex flex-col gap-6 p-4'>
                         <div className='card'>
                             <div className='mx-auto text-6xl card-title text-rose-400'>
-                                Slimering
+                                Mint & Staking
                             </div>
                             <div className='flex gap-2 card-body bg-[#ABDEE6]'>
-                                <p>Something to introduce our collection</p>
+                                <p>Something to introduce your collection</p>
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur
                                     adipiscing elit. In egestas vestibulum
@@ -89,7 +89,7 @@ const HomePage = () => {
                         </div>
                         <div className='card'>
                             <div className='mx-auto text-3xl text-green-200 card-title'>
-                                {stakedPercentage?.toFixed(2)} % Slimerings
+                                {stakedPercentage?.toFixed(2)} % NFTs
                                 Staked!
                             </div>
                             <div className='grid grid-cols-4 gap-2 px-6 py-4 bg-green-300 card-body'>
@@ -105,12 +105,12 @@ const HomePage = () => {
                     <img src='logo.png' alt='logo' className='logo' />
                     <img
                         src='slimerings.gif'
-                        alt='slimerings'
+                        alt='Mint and Stakings'
                         className='slimerings'
                     />
                 </div> */}
                 <h2 className='mx-auto text-5xl text-white shadow-special'>
-                    Mint some Slimerings!
+                    Mint some NFTs!
                 </h2>
 
                 <Mint

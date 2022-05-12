@@ -25,7 +25,7 @@ const Header = () => {
                         <a className='flex flex-col items-center'>
                             <div className='flex items-center'>
                                 <h1 className='ml-2 heading-special'>
-                                    SLIMERING
+                                    Mint and Staking
                                 </h1>
 
                                 <img
