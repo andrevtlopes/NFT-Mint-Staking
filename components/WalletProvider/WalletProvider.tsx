@@ -2,7 +2,7 @@ import React, { FC, useMemo } from "react"
 import * as anchor from '@project-serum/anchor'
 import {
   ConnectionProvider,
-  WalletProvider,
+  WalletProvider as Provider,
 } from "@solana/wallet-adapter-react"
 import { WalletAdapterNetwork } from "@solana/wallet-adapter-base"
 import {
@@ -32,7 +32,7 @@ export const connection = new anchor.web3.Connection(
 // Default styles that can be overridden by your app
 require("@solana/wallet-adapter-react-ui/styles.css")
 
-const Wallet: FC = ({ children }: { children: React.ReactChild }) => {
+const WalletProvider: FC = ({ children }: { children: React.ReactNode }) => {
   // The network can be set to 'devnet', 'testnet', or 'mainnet-beta'.
   const network = process.env
     .NEXT_PUBLIC_CONNECTION_NETWORK as WalletAdapterNetwork
@@ -60,7 +60,7 @@ const Wallet: FC = ({ children }: { children: React.ReactChild }) => {
         commitment: "confirmed",
       }}
     >
-      <WalletProvider wallets={wallets} autoConnect>
+      <Provider wallets={wallets} autoConnect>
         <WalletModalProvider>
           {/* <WalletMultiButton />
           <WalletDisconnectButton /> */}
@@ -68,9 +68,9 @@ const Wallet: FC = ({ children }: { children: React.ReactChild }) => {
           {children}
           {/* Your app's components go here, nested within the context providers. */}
         </WalletModalProvider>
-      </WalletProvider>
+      </Provider>
     </ConnectionProvider>
   )
 }
 
-export default Wallet
+export default WalletProvider;

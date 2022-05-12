@@ -9,6 +9,7 @@ const WalletManager = () => {
         <div className='flex'>
              <div className='flex'>
                 {wallet?.publicKey ? (
+                    // @ts-ignore
                     <WalletMultiButton
                         className='self-end gap-1 btn btn-primary btn-sm'
                         startIcon={null as any}

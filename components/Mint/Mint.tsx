@@ -335,7 +335,7 @@ const Mint = (props: MintProps) => {
           }}
         >
           {!wallet.connected ? (
-            <ConnectButton>Connect Wallet</ConnectButton>
+            <WalletModalButton />
           ) : (
             <>
               {candyMachine && (
@@ -434,7 +434,7 @@ const Mint = (props: MintProps) => {
                 {candyMachine?.state.isActive &&
                 candyMachine?.state.gatekeeper &&
                 wallet.publicKey &&
-                wallet.signTransaction ? (
+                wallet.signTransaction ? ( <>
                   <GatewayProvider
                     wallet={{
                       publicKey:
@@ -509,15 +509,15 @@ const Mint = (props: MintProps) => {
                     }}
                     broadcastTransaction={false}
                     options={{ autoShowModal: false }}
-                  >
+                  />
                     <MintButton
                       candyMachine={candyMachine}
                       isMinting={isUserMinting}
                       setIsMinting={val => setIsUserMinting(val)}
                       onMint={onMint}
                       isActive={isActive || (isPresale && isWhitelistUser)}
-                    />
-                  </GatewayProvider>
+                        />
+                  </>
                 ) : (
                   <MintButton
                     candyMachine={candyMachine}

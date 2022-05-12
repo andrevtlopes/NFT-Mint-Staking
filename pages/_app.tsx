@@ -42,6 +42,7 @@ function App(props: AppProps) {
     return (
         <MaterialThemeProvider theme={theme}>
             <ThemeProvider theme={defaultTheme}>
+                {/* @ts-ignore */}
                 <WalletProvider>
                     <div data-theme='cupcake' className='relative min-h-screen text-sm bg-base-200'>
                         <Header />
